@@ -30,3 +30,8 @@ src_install() {
 	insinto /usr/share/apps/khotkeys
 	doins ${FILESDIR}/khotkeys/samsung-scripts.khotkeys
 }
+
+pkg_postinst() {
+	elog "You need to log out before seeing samsung shortcuts in kde settings."
+	elog "Make sure you are in 'users' group to be able to use those shortcuts."
+}
