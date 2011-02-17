@@ -7,7 +7,7 @@ DESCRIPTION="Scripts for Samsung netbooks"
 HOMEPAGE="http://www.voria.org/forum"
 SRC_URI=""
 
-LICENCE="GPL-2"
+LICENCE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
