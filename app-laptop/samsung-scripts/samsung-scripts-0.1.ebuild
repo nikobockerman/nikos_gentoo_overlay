@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
+DEPEND="kde-base/khotkeys"
 RDEPEND="sys-apps/vbetool"
 
 src_unpack() {
@@ -25,4 +26,7 @@ src_install() {
 	insinto /etc/sudoers.d
 	doins ${FILESDIR}/sudoers.d/${PN}
 	fperms 0440 /etc/sudoers.d/${PN}
+
+	insinto /usr/share/apps/khotkeys
+	doins ${FILESDIR}/khotkeys/samsung-scripts.khotkeys
 }
