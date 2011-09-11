@@ -1,0 +1,11 @@
+--- usr/local/Brother/Printer/HL2270DW/lpd/filterHL2270DW.orig	2011-09-11 16:38:26.000000000 +0300
++++ usr/local/Brother/Printer/HL2270DW/lpd/filterHL2270DW	2011-09-11 16:46:54.000000000 +0300
+@@ -22,7 +22,7 @@
+ PRINTER_TMP=$(echo $PRINTER | sed -e 's/ //g' -e 's/-//g')
+ PCL=1
+ 
+-BR_PRT_PATH=/usr/local/Brother/Printer/$PRINTER_TMP
++BR_PRT_PATH=/usr/share/brother/$PRINTER_TMP
+ RCFILE=`eval echo $BR_PRT_PATH/inf/brPRINTERrc | eval sed 's/PRINTER/"$PRINTER_TMP"/'`
+ PAPER_INF=$BR_PRT_PATH/inf/paperinf
+ PSCONV=$BR_PRT_PATH/lpd/psconvert2

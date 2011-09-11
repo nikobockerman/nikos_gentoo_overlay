@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=25
+Encoding=UTF-8
+Name=Tuxboot
+Comment=Tool for creating bootable Live USB drives
+Categories=Application;System;
+Exec=/usr/bin/tuxboot
+Terminal=false
+Type=Application
+Name[en_US]=Tuxboot
+GenericName[en_US]=Tuxboot
+Comment[en_US]=Tool for creating bootable Live USB drives

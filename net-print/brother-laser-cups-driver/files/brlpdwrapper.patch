@@ -1,0 +1,34 @@
+--- brlpdwrapperHL2270DW.orig	2011-09-11 16:54:13.000000000 +0300
++++ brlpdwrapperHL2270DW	2011-09-11 16:57:58.000000000 +0300
+@@ -126,25 +126,25 @@
+ fi
+ 
+ 
+-if [ -e "/usr/local/Brother/Printer/$PRINTER/lpd/filter$PRINTER" ]; then
++if [ -e "/usr/share/brother/$PRINTER/lpd/filter$PRINTER" ]; then
+        :
+ else
+-    echo "ERROR: /usr/local/Brother/Printer/$PRINTER/lpd/filter$PRINTER does not exist"   >>$LOGFILE
++    echo "ERROR: /usr/share/brother/$PRINTER/lpd/filter$PRINTER does not exist"   >>$LOGFILE
+     errorcode=30
+     exit $errorcode
+ fi
+ 
+-if [ -e "/usr/local/Brother/Printer/HL2270DW/cupswrapper/brcupsconfig4" ]; then
++if [ -e "/usr/share/brother/HL2270DW/cupswrapper/brcupsconfig4" ]; then
+   if [ $DEBUG = 0 ]; then
+-     /usr/local/Brother/Printer/HL2270DW/cupswrapper/brcupsconfig4  $PRINTER  $PPD 0 "$options" >> /dev/null
++     /usr/share/brother/HL2270DW/cupswrapper/brcupsconfig4  $PRINTER  $PPD 0 "$options" >> /dev/null
+   else
+-     /usr/local/Brother/Printer/HL2270DW/cupswrapper/brcupsconfig4  $PRINTER  $PPD $LOGCLEVEL "$options" >>$LOGFILE
++     /usr/share/brother/HL2270DW/cupswrapper/brcupsconfig4  $PRINTER  $PPD $LOGCLEVEL "$options" >>$LOGFILE
+   fi
+ fi
+ 
+ 
+ if [ $DEBUG -le 2 ]; then
+-    cat    $INPUT_TEMP_PS | /usr/local/Brother/Printer/$PRINTER/lpd/filter$PRINTER
++    cat    $INPUT_TEMP_PS | /usr/share/brother/$PRINTER/lpd/filter$PRINTER
+ fi
+ 
+ if [ $DEBUG -ge 2 ];  then
