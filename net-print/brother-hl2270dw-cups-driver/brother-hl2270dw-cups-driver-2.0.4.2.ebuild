@@ -129,14 +129,19 @@ src_install()
 
 pkg_postinst()
 {
-	elog "You can install the printer using the following command:"
-	elog "lpadmin -p ${PRINTER} -E -v usb:/dev/usb/lp0" \
-		"-P	/usr/share/ppd/Brother/${PPDFILE}"
-	echo
+	elog "Printer connected with usb:"
+	elog "  Device URI should be USB://Brother/$PRINTER"
+	elog ""
+	elog "Printer connected through network:"
+	elog "  Printer should have the following settings:"
+	elog "    Device: 'LPD/LPR Host or Printer' or 'AppSocket/HP JetDirect'"
+	elog "    Device URI: 'lpd://(Your printer's ip address)/binary_p1'"
+	elog "    Make/Manufacturer Selection: 'Brother'"
+	elog "    Model/Driver Selection: 'Brother HL2270DW for CUPS'"
 }
 
-pkg_prerm()
-{
-	elog "Removing ${PRINTER} from cups."
-	lpadmin -x HL2270DW
-}
+#pkg_prerm()
+#{
+#	elog "Removing ${PRINTER} from cups."
+#	lpadmin -x HL2270DW
+#}
