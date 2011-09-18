@@ -79,7 +79,7 @@ pkg_prerm() {
 	if [[ $? != 0 ]] ; then
 		ewarn "Couldn’t list existing packages..."
 	fi
-	PKG=$(echo ${UNOPKG_LIST} | egrep -m1 "^Identifier: (org.puimula.ooovoikko|org.libreoffice.legacy.libreoffice-voikko.*.uno.pkg)" | sed -ne "s/^Identifier: \\(.*\\)/\\1/p")
+	PKG=$(echo "${UNOPKG_LIST}" | egrep -m1 "^Identifier: (org.puimula.ooovoikko|org.libreoffice.legacy.libreoffice-voikko.*.uno.pkg)" | sed -ne "s/^Identifier: \\(.*\\)/\\1/p")
 	if [ "${PKG}" != "" ]; then
 		einfo "Removing uno package ${PKG}..."
 		if "${UNOPKG}" remove --shared ${PKG} &>/dev/null
