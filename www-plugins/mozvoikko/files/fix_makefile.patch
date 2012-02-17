@@ -1,0 +1,18 @@
+--- Makefile.orig	2012-02-17 18:28:01.639546944 +0200
++++ Makefile	2012-02-17 18:34:20.676929078 +0200
+@@ -1,5 +1,5 @@
+ 
+-VERSION=$(shell grep -E -o '<em.version>(.*)</em.version>' install.rdf | sed -e 's/<[a-z:/]*>//g')
++VERSION=$(shell grep -E -o '<em.version>(.*)</em.version>' install.rdf | sed -e 's_<em:version>\(.*\)</em:version>_\1_')
+ 
+ XPI_FILES=README COPYING ChangeLog install.rdf chrome.manifest components/MozVoikko2.js
+ SOURCE_FILES=$(XPI_FILES) Makefile
+@@ -18,7 +18,7 @@
+ 
+ mozvoikko2:
+ 	rm -vf mozvoikko2.xpi
+-	zip -9 mozvoikko2.xpi $(XPI_FILES) $(shell find voikko -type f '!' -name '.*' '!' -path 'voikko*/.*')
++	zip -9 mozvoikko2.xpi $(XPI_FILES) 
+ 
+ clean:
+ 	rm -f mozvoikko-$(VERSION).tar.gz mozvoikko2.xpi
