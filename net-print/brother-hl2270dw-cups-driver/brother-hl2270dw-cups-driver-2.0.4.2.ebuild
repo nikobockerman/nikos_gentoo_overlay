@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -28,7 +28,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-text/psutils
-	app-text/a2ps"
+	app-text/a2ps
+	app-arch/gzip"
 RDEPEND="${DEPEND}"
 RESTRICT="mirror strip"
 
@@ -73,7 +74,7 @@ src_unpack()
 	#  -e "s/\(SaveMode:* \)On/\1ON/g" ${PPDFILE}
 	#gzip ${PPDFILE}
 	#PPDFILE="${PPDFILE}.gz"
-	
+
 	#epatch $FILESDIR/brlpdwrapper.patch
 	#epatch $FILESDIR/inf_setupPrintcap2.patch
 	#epatch $FILESDIR/lpd_filter.patch
@@ -100,7 +101,7 @@ src_install()
 	#insinto /usr/share/cups/model
 	insinto /usr/share/ppd/Brother
 	doins ${PPDFILE}
-	PORTAGE_COMPRESS="gzip"	ecompress "${D}/usr/share/ppd/Brother/${PPDFILE}"
+	gzip "${D}/usr/share/ppd/Brother/${PPDFILE}"
 
 	#exeinto /usr/share/brother/$PRINTER/cupswrapper
 	exeinto /usr/local/Brother/Printer/$PRINTER/cupswrapper
@@ -116,7 +117,7 @@ src_install()
 	doins usr/local/Brother/Printer/$PRINTER/inf/paperinf
 	fperms a+w /usr/local/Brother/Printer/$PRINTER/inf
 	fperms a+w /usr/local/Brother/Printer/$PRINTER/inf/br${PRINTER}rc
-	
+
 	#exeinto /usr/share/brother/$PRINTER/inf
 	exeinto /usr/local/Brother/Printer/$PRINTER/inf
 	doexe usr/local/Brother/Printer/$PRINTER/inf/braddprinter

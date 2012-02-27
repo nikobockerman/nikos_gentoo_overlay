@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.5 2009/07/07 23:15:46 flameeyes Exp $
 
@@ -54,15 +54,14 @@ pkg_nofetch() {
 #}
 
 src_prepare() {
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-frag.c.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-GenDefs.h.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-interceptor.c.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-linuxcniapi.c.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-linuxcniapi.h.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-linuxkernelapi.c.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-Makefile.patch || die "Patching failed"
-	epatch ${FILESDIR}/${PV}-autoconf.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-frag.c.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-GenDefs.h.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-interceptor.c.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-linuxcniapi.c.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-linuxcniapi.h.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-linuxkernelapi.c.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-Makefile.patch || die "Patching failed"
+	epatch "${FILESDIR}"/"${PV}"-autoconf.patch || die "Patching failed"
 }
 
 src_install() {

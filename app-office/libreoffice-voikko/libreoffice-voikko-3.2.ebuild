@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -21,8 +21,7 @@ DEPEND="app-office/libreoffice[odk]
 	app-text/voikko
 	sys-apps/grep
 	sys-apps/sed
-	sys-apps/sysvinit
-	!app-office/oo2-voikko"
+	sys-apps/sysvinit"
 RDEPEND="app-office/libreoffice
 	app-text/voikko"
 
@@ -93,4 +92,3 @@ pkg_prerm() {
 		ewarn "You may need to \`unopkg remove\` them manually."
 	fi
 }
-

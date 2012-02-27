@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -35,7 +35,6 @@ src_prepare() {
 #		XULRUNNER_SDK=/usr/include/xulrunner-$(best_version \
 #		net-libs/xulrunner)/ || die "emake failed"
 #}
-
 
 src_install() {
 #	xpi_install $S/${PN}2.xpi

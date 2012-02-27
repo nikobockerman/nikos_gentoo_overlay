@@ -1,5 +1,0 @@
-## SAMSUNG_SCRIPTS: rule for samsung-script
-Cmnd_Alias	SAMSUNG_SCRIPTS=/usr/bin/samsung-scripts
-%users ALL=(ALL) NOPASSWD: SAMSUNG_SCRIPTS
-gdm ALL=(ALL) NOPASSWD: SAMSUNG_SCRIPTS
-

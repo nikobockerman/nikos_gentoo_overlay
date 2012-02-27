@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-549.ebuild,v 1.3 2011/05/24 21:05:19 maekke Exp $
 
@@ -28,8 +28,6 @@ MY_PN="unetbootin"
 src_prepare() {
 	sed -i '/^RESOURCES/d' ${MY_PN}.pro
 	rm ${MY_PN}_da.ts
-
-	
 }
 
 src_configure() {
@@ -42,7 +40,7 @@ src_configure() {
 src_install() {
 	dobin ${PN} || die
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop || die
+	doins "${FILESDIR}/${PN}.desktop" || die
 	#for file in ${PN}*.png; do
 	#	size="${file/unetbootin_}"
 	#	size="${size/.png}x${size/.png}"

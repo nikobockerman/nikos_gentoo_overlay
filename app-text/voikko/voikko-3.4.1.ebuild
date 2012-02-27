@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -29,6 +29,6 @@ S="${WORKDIR}/${MY_P/rc?/}"
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	dodoc README || die "docs missing"
-	rm $D/usr/$(get_libdir)/*.la
-	rm $D/usr/$(get_libdir)/*.a
+	rm "${D}"/usr/$(get_libdir)/*.la
+	rm "${D}"/usr/$(get_libdir)/*.a
 }

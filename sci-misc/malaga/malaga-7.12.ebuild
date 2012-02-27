@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,18 +11,16 @@ SRC_URI="http://home.arcor.de/bjoern-beutel/malaga/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="gtk doc readline emacs gui"
+IUSE="gtk doc readline emacs"
 
 DEPEND=">=dev-libs/glib-2.0
-	gui? ( x11-libs/cairo
-		x11-libs/pango )
-	gtk? ( >=x11-libs/gtk+-2.0 )
+	gtk? ( >=x11-libs/gtk+-2.8 )
 	doc? ( >=sys-apps/texinfo-4.0 )
 	readline? ( sys-libs/readline )"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	econf $(use_with readline ) $(use_enable gui malshow ) || die "econf failed"
+	econf $(use_with readline ) $(use_enable gtk malshow ) || die "econf failed"
 	emake || die "emake failed"
 }
 
