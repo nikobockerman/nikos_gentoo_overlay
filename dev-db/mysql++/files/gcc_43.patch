@@ -1,0 +1,10 @@
+--- ssx/genv2.cpp.orig	2012-03-30 15:22:11.191360528 +0300
++++ ssx/genv2.cpp	2012-03-30 15:22:24.578962152 +0300
+@@ -35,6 +35,7 @@
+ #include <iostream>
+ #include <fstream>
+ #include <typeinfo>
++#include <cstring>
+ 
+ using namespace std;
+ 
