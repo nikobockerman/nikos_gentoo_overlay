@@ -27,13 +27,20 @@ RDEPEND="app-office/libreoffice
 
 #S="${WORKDIR}/${MY_P}"
 
+
+
 pkg_setup() {
 	if pidof soffice.bin >/dev/null; then
 		ewarn "${PN} may not be installed while LibreOffice is running."
 	fi
+	
+	LIBREOFFICE_SDK_DIR="${ROOT}/usr/lib/libreoffice/sdk"
+	if has_version "<app-office/libreoffice-3.5"; then
+		LIBREOFFICE_SDK_DIR="${ROOT}/usr/lib/libreoffice/basis-link/sdk"
+	fi
 	einfo "Setting SDK environment from "
-	einfo "	${ROOT}/usr/lib/libreoffice/basis-link/sdk/setsdkenv_unix.sh"
-	source "${ROOT}"/usr/lib/libreoffice/basis-link/sdk/setsdkenv_unix.sh
+	einfo "${LIBREOFFICE_SDK_DIR}/setsdkenv_unix.sh"
+	source "${LIBREOFFICE_SDK_DIR}"/setsdkenv_unix.sh
 	export UNOPKG="${ROOT}"/usr/bin/unopkg
 }
 
