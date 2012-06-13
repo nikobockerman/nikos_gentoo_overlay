@@ -13,7 +13,7 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="custom_patch"
+IUSE="custom"
 
 RDEPEND=">=virtual/mysql-4.0"
 DEPEND="${RDEPEND}
@@ -21,9 +21,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/gcc_43.patch
-	if use custom_patch ; then
-		epatch "${FILESDIR}"/custom.patch
-	fi
+	#if use custom_patch ; then
+	#	epatch "${FILESDIR}"/custom.patch
+	#fi
 
 	for i in "${S}"/lib/*.h ; do
 		sed -i \
@@ -37,6 +37,10 @@ src_configure() {
 	local myconf
 	#use prefix || local EPREFIX=
 	myconf="--enable-exceptions --enable-thread-check"
+
+	if use custom ; then
+		myconf="${myconf} --with-field-limit=71"
+	fi
 
 	filter-ldflags -Wl,--as-needed
 

@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>mysql</herd>
 	<use>
-		<flag name="custom_patch">Enables Nikos' custom patches. Do not enable if you don't know what you are doing.</flag>
+		<flag name="custom">Enables custom changes. Do not enable if you don't know what you are doing.</flag>
 	</use>
 </pkgmetadata>
