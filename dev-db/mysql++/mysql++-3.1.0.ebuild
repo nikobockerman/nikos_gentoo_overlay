@@ -21,9 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/gcc_43.patch
-	#if use custom_patch ; then
-	#	epatch "${FILESDIR}"/custom.patch
-	#fi
+	epatch "${FILESDIR}"/fix-compile-warnings.patch
 
 	for i in "${S}"/lib/*.h ; do
 		sed -i \
