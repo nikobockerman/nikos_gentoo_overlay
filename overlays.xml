@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+<repo quality="experimental" status="official">
+    <name>nikos-overlay</name>
+    <description>Nikos' ebuilds</description>
+    <homepage>https://github.com/nikobockerman/nikos_gentoo_overlay.git</homepage>
+    <owner type="project">
+        <email>niko.bockerman@gmail.com</email>
+        <name>Niko Böckerman</name>
+    </owner>
+    <source type="git">git://github.com/nikobockerman/nikos_gentoo_overlay.git</source>
+    <feed>https://github.com/nikobockerman/nikos_gentoo_overlay/commits/master.atom</feed>
+</repo>
+</repositories>
+
