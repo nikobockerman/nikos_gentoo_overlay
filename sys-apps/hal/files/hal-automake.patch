@@ -1,0 +1,11 @@
+--- hal/policy/Makefile.am.ark	2010-07-15 21:21:09.599695010 +0000
++++ hal/policy/Makefile.am	2010-07-15 21:21:17.192696155 +0000
+@@ -24,7 +24,7 @@ check:
+ 	      then \
+                 echo ok; \
+             else \
+-                echo failed; \ 
++                echo failed; \
+ 		exit 1; \
+             fi; \
+         done;
