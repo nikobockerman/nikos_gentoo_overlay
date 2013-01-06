@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2013-01-06 18:21:52.919404825 +0200
++++ src/Makefile.in	2013-01-06 18:22:10.147213177 +0200
+@@ -1566,7 +1566,7 @@
+ 	uninstall-pkgincludeHEADERS
+ 
+ autocorrect/data.hpp: Makefile $(srcdir)/../data/autocorrect/fi_FI.xml $(srcdir)/autocorrect/triecompiler.py
+-	python $(srcdir)/autocorrect/triecompiler.py $(srcdir)/../data/autocorrect/fi_FI.xml autocorrect/data.hpp
++	python2 $(srcdir)/autocorrect/triecompiler.py $(srcdir)/../data/autocorrect/fi_FI.xml autocorrect/data.hpp
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
