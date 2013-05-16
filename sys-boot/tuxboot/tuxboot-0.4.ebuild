@@ -20,8 +20,8 @@ IUSE=""
 
 #S="${WORKDIR}/${P}"
 
-DEPEND="dev-qt/qtgui
-		dev-qt/qtcore"
+DEPEND="dev-qt/qtgui:4
+		dev-qt/qtcore:4"
 RDEPEND="${DEPEND}
 		 sys-fs/mtools
 		 sys-boot/syslinux
