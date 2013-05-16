@@ -17,7 +17,7 @@ S=${WORKDIR}/${MY_P}
 PATCHNAME="${MY_P}-gentoo-patches-${PATCH_VERSION}"
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/hal"
-SRC_URI="mirror://kde-sunset/${MY_P}.tar.bz2
+SRC_URI="http://hal.freedesktop.org/releases/${MY_P}.tar.bz2
 	mirror://kde-sunset/${PATCHNAME}.tar.bz2"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
