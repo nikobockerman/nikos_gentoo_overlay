@@ -1,0 +1,6 @@
+*rsnapshot-backup-1.0_alpha3-r1 (08 Oct 2013)
+
+  08 Oct 2013;  <niko@gentoo.org> +metadata.xml,
+  +rsnapshot-backup-1.0_alpha3-r1.ebuild, -rsnapshot-backup-1.0_alpha3.ebuild:
+  Update rsnapshot-backup  Fix repoman errors+warnings: - Migrate to
+  distutils-r1 - change eapi to 5

@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-PYTHON_COMPAT='python3_2'
-inherit python-distutils-ng
+PYTHON_COMPAT=(python3_2)
+inherit distutils-r1
 
 DESCRIPTION="Wrapper for rsnapshot"
 HOMEPAGE="https://github.com/nikobockerman/rsnapshot-backup"
-SRC_URI="https://github.com/downloads/nikobockerman/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/nikobockerman/${PN}/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -23,8 +23,8 @@ RDEPEND="${DEPEND}
 	sys-apps/util-linux"
 
 python_install_all() {
+	distutils-r1_python_install_all
 	dodoc README
-	dodoc COPYING
 
 	insinto /etc/rsnapshot-backup
 	doins etc/rsnapshot-backup/emailsettings.cfg
