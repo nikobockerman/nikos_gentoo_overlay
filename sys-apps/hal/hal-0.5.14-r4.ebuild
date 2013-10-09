@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.14-r4.ebuild,v 1.8 2011/05/20 14:12:45 ssuominen Exp $
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/hal"
 SRC_URI="http://hal.freedesktop.org/releases/${MY_P}.tar.bz2
 	mirror://kde-sunset/${PATCHNAME}.tar.bz2"
 
-LICENSE="|| ( GPL-2 AFL-2.0 )"
+LICENSE="|| ( AFL-2.1 GPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 
@@ -48,7 +48,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 		 x86? ( >=sys-apps/dmidecode-2.7 )
 		 selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
+		virtual/pkgconfig
 		 >=dev-util/gperf-3.0.3
 		>=dev-util/intltool-0.35
 		doc?	(
