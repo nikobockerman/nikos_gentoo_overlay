@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ printer=$(echo ${PRINTER} | tr "[:upper:]" "[:lower:]")
 url="http://www.brother.com/pub/bsc/linux/dlf"
 SRC_URI="$url/${printer}lpr-2.1.0-1.i386.deb $url/cupswrapper${PRINTER}-${MY_PV}.i386.deb"
 
-LICENSE="GPL-2 as-is"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
