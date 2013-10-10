@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-549.ebuild,v 1.3 2011/05/24 21:05:19 maekke Exp $
 
@@ -28,7 +28,6 @@ RDEPEND="${DEPEND}
 		 app-arch/p7zip"
 
 DOCS=( ChangeLog README.TXT )
-
 
 src_prepare() {
 	echo "DEFINES += NOSTATIC" >> ${PN}.pro
@@ -61,10 +60,10 @@ src_install() {
 
 	insinto /usr/share/applications
 	doins "${PN}.desktop" || die
-	
+
 	insinto /usr/share/pixmaps
 	doins "${PN}.xpm" || die
-	
+
 	insinto /usr/share/${PN}
 	doins i18n/*.qm
 }
