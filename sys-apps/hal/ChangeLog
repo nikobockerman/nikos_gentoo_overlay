@@ -1,2 +1,5 @@
+  10 Oct 2013;  <niko@gentoo.org> hal-0.5.14-r4.ebuild:
+  Repoman fixes  Remove few arches
+
   09 Oct 2013;  <niko@gentoo.org> +metadata.xml, hal-0.5.14-r4.ebuild:
   Repoman fixes
