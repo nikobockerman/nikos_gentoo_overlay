@@ -36,9 +36,9 @@ src_configure() {
 	local myconf
 	use prefix || local EPREFIX=
 	myconf="--enable-thread-check --with-mysql=${EPREFIX}/usr"
-	if use custom ; then                                                                                                                                                                                                   
-		myconf="${myconf} --with-field-limit=71"                                                                                                                                                                       
-	fi 
+	if use custom ; then
+		myconf="${myconf} --with-field-limit=71"
+	fi
 
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 	econf ${myconf}
