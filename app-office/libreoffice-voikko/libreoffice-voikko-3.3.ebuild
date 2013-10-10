@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -27,13 +27,11 @@ RDEPEND="app-office/libreoffice
 
 #S="${WORKDIR}/${MY_P}"
 
-
-
 pkg_setup() {
 	if pidof soffice.bin >/dev/null; then
 		ewarn "${PN} may not be installed while LibreOffice is running."
 	fi
-	
+
 	LIBREOFFICE_SDK_DIR="${ROOT}/usr/lib/libreoffice/sdk"
 	if has_version "<app-office/libreoffice-3.5"; then
 		LIBREOFFICE_SDK_DIR="${ROOT}/usr/lib/libreoffice/basis-link/sdk"
