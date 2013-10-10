@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,13 +22,13 @@ RDEPEND="sci-misc/malaga
 	>=sci-misc/suomi-malaga-1.4
 	virtual/libiconv"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	virtual/pkgconfig
 	=dev-lang/python-2*"
 
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch $FILESDIR/python2.diff
+	epatch "$FILESDIR/python2.diff"
 }
 
 src_install() {

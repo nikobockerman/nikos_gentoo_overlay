@@ -1,0 +1,3 @@
+  10 Oct 2013;  <niko@gentoo.org> -voikko-3.2.1.ebuild, -voikko-3.3.ebuild,
+  -voikko-3.4.1.ebuild, voikko-3.5.ebuild:
+  Repoman fixes and remove old versions
