@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>mysql</herd>
-	<use>
+    <maintainer type="project">
+        <email>mysql-bugs@gentoo.org</email>
+        <name>MySQL</name>
+    </maintainer>
+    <maintainer type="person">
+        <email>niko.bockerman@gmail.com</email>
+        <name>Niko Böckerman</name>
+    </maintainer>
+    <use>
 		<flag name="custom">Enables custom changes. Do not enable if you don't know what you are doing.</flag>
 	</use>
 </pkgmetadata>
