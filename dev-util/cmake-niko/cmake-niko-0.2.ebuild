@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-util/cmake"
+DEPEND="dev-util/cmake"
 
 CMAKE_MODULES="FindMySQL++.cmake
 		FindMYSQL.cmake
